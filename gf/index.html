@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advertorial – Gesundheit</title>
+
+  <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
+  <script type="text/javascript">
+    digistorePromocode({ product_id: 633575, adjust_domain: true });
+  </script>
+
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #4a4a4a;
+      --accent: #0d6b2f;
+      --accent-2: #0b5a27;
+      --card: #ffffff;
+      --bg: #f7f7f7;
+      --border: #e5e5e5;
+      --footer-bg: #e0e0e0;
+      --footer-text: #2c2c2c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .wrap {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 28px 20px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+      text-align: left;
+      display: inline-block;
+      max-width: 700px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 22px;
+    }
+
+    /* 🔴 Faixa vermelha mais estreita + texto amarelo */
+    .alert-strip {
+      background: #c62828;
+      color: #ffeb3b;
+      /* amarelo */
+      text-align: center;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 6px 8px;
+      line-height: 1.2;
+      letter-spacing: 0.2px;
+      margin: 0 -18px;
+      border-radius: 8px 8px 0 0;
+      white-space: nowrap;
+      /* força ficar em uma linha só */
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .title {
+      font-size: 28px;
+      line-height: 1.25;
+      margin: 18px 0 10px;
+      text-align: left;
+      font-weight: 800;
+      padding: 0 18px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      margin: 0 0 16px;
+      text-align: left;
+      padding: 0 18px;
+    }
+
+    .thumb {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      border: none;
+      margin: 28px -18px 32px;
+    }
+
+    .thumb img {
+      display: block;
+      width: 115%;
+      max-width: none;
+      height: auto;
+      margin-left: -7.5%;
+      border-radius: 0;
+      filter: blur(10px);
+      transition: filter .35s ease;
+    }
+
+    .thumb img.loaded {
+      filter: blur(0);
+    }
+
+    @media (max-width: 700px) {
+      .thumb {
+        margin: 28px -16px 36px;
+      }
+
+      .thumb img {
+        width: 125%;
+        margin-left: -12.5%;
+      }
+
+      footer {
+        margin-top: 60px;
+      }
+
+      .alert-strip {
+        margin: 0 -16px;
+        font-size: 12px;
+        padding: 5px 6px;
+      }
+    }
+
+    .play {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(transparent 50%, rgba(0, 0, 0, .45));
+    }
+
+    .play-icon {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      background: #ff3b30;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, .25);
+    }
+
+    .play-icon:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 26px solid #fff;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+      margin-left: 6px;
+    }
+
+    .lead-button {
+      display: block;
+      margin: 24px auto 0;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      max-width: 460px;
+      box-shadow: 0 8px 20px rgba(13, 107, 47, .15);
+      transition: transform .06s ease, background-color .25s ease;
+    }
+
+    .lead-button:hover {
+      background-color: var(--accent-2);
+    }
+
+    .lead-button:active {
+      transform: scale(.98);
+    }
+
+    /* ⚫ Texto da descrição agora preto */
+    .note {
+      font-size: 14px;
+      color: #000;
+      /* preto */
+      line-height: 1.5;
+      margin: 16px 0 0;
+      text-align: left;
+      padding: 0 18px;
+    }
+
+    footer {
+      margin: 48px 0 0;
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      text-align: center;
+      padding: 32px 16px;
+    }
+
+    footer .top-links {
+      margin-bottom: 16px;
+    }
+
+    footer .top-links a {
+      color: var(--footer-text);
+      text-decoration: none;
+      margin: 0 14px;
+      font-weight: 500;
+    }
+
+    footer .top-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer .disclaim {
+      max-width: 980px;
+      margin: 10px auto 0;
+      line-height: 1.7;
+      font-size: 14px;
+      color: var(--footer-text);
+    }
+
+    footer .copy {
+      margin-top: 18px;
+      font-size: 13px;
+      color: var(--footer-text);
+    }
+
+    @media (max-width:700px) {
+      .title {
+        font-size: 24px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .lead-button {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width:480px) {
+      .wrap {
+        padding: 16px 14px 18px;
+      }
+
+      .card {
+        padding-bottom: 16px;
+      }
+
+      .title {
+        font-size: 22px;
+      }
+
+      .play-icon {
+        width: 72px;
+        height: 72px;
+      }
+
+      .play-icon:before {
+        border-left-width: 22px;
+        border-top-width: 13px;
+        border-bottom-width: 13px;
+      }
+
+      footer {
+        padding: 28px 14px;
+      }
+
+      footer .disclaim {
+        font-size: 13px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <main class="wrap" role="main">
+    <article class="card">
+      <div class="alert-strip">Diese Seite wird in wenigen Minuten offline gehen!</div>
+
+      <h1 class="title">Dr. Julia enthüllt: Ihr Darm könnte der wahre Grund für Ihre Gewichtszunahme sein (testen Sie dieses Ritual heute Abend)</h1>
+      <p class="subtitle">Ein 20-Sekunden-Ritual mit koreanischem Ingwer und 3 natürlichen Zutaten, das die Sättigungshormone aktiviert, Blähungen reduziert und die Fettverbrennung im Schlaf ankurbelt – ganz ohne Diät oder Sport.</p>
+
+      <a href="#" class="thumb-link" aria-label="Video öffnen">
+        <figure class="thumb" aria-label="Videovorschau">
+          <picture>
+            <source srcset="https://i.imgur.com/hJ2RWYn.png" type="image/webp">
+            <img src="https://i.imgur.com/hJ2RWYn.png" alt="Leber-Illustration mit Lupe" width="700" height="400" loading="lazy" decoding="async" onload="this.classList.add('loaded')" />
+          </picture>
+        </figure>
+      </a>
+
+      <a class="lead-button" href="#">👉 Dann sehen Sie sich jetzt dieses kurze Video an.</a>
+
+      <p class="note">Neue Studien zeigen, wie Sie hartnäckiges Bauchfett auf natürliche Weise loswerden können, indem Sie das Darmgleichgewicht wiederherstellen und Ihren Stoffwechsel rund um die Uhr aktivieren. Wenn Sie – oder jemand, den Sie kennen – Schwierigkeiten haben abzunehmen, fühlen Sie sich oft aufgebläht oder energielos?</p>
+
+      <a class="lead-button" href="#">👉 Dann sehen Sie sich jetzt dieses kurze Video an.</a>
+    </article>
+
+    <script>
+      const URL_A = "../gf1";
+      const URL_B = "../gf2";
+
+      function withQS(u) { return u + (location.search || ""); }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.thumb-link, .lead-button').forEach(el => {
+          const chosen = (Math.random() < 0.5) ? URL_A : URL_B;
+          const dest = withQS(chosen);
+          el.href = dest;
+          el.addEventListener('click', e => { e.preventDefault(); location.href = dest; });
+        });
+      });
+    </script>
+
+    <footer>
+      <div class="top-links">
+        <a href="../nutzungsbedingungen">Nutzungsbedingungen</a>
+        <a href="../datenschutzrichtlinie">Datenschutzerklärung</a>
+      </div>
+      <div class="disclaim">
+        Diese Website steht in keiner Verbindung zu YouTube oder Google LLC und wird von YouTube in keiner Weise unterstützt oder gesponsert. YouTube ist eine eingetragene Marke der Google LLC.
+        Die Vervielfältigung, Verbreitung oder Änderung von Inhalten dieser Website – ganz oder teilweise – ist untersagt. Sämtliche Inhalte sind durch Urheberrechts- und geistige Eigentumsgesetze geschützt.
+        Die bereitgestellten Informationen dienen ausschließlich Bildungs- und Informationszwecken. Es wird keine Garantie für gleiche Ergebnisse gegeben.
+      </div>
+      <div class="copy">Copyright © 2025. Alle Rechte vorbehalten.</div>
+    </footer>
+  </main>
+</body>
+
+</html>
