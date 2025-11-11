@@ -11,17 +11,6 @@
     digistorePromocode({ product_id: 633575, adjust_domain: true });
   </script>
 
-  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
-
-  <script>
-    window.googlePixelId = "68e3c9c7a2ea0ad818ce7597";
-    var a = document.createElement("script");
-    a.setAttribute("async", "");
-    a.setAttribute("defer", "");
-    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
-    document.head.appendChild(a);
-  </script>
-
   <style>
     :root {
       --text: #1a1a1a;
@@ -68,20 +57,23 @@
       padding-bottom: 22px;
     }
 
-    /* 🔴 Faixa vermelha ocupando toda a largura interna */
+    /* 🔴 Faixa vermelha mais estreita + texto amarelo */
     .alert-strip {
       background: #c62828;
       color: #ffeb3b;
-      /* amarelo forte */
+      /* amarelo */
       text-align: center;
       font-weight: 700;
-      font-size: 15px;
-      padding: 12px 16px;
-      line-height: 1.4;
+      font-size: 13px;
+      padding: 6px 8px;
+      line-height: 1.2;
       letter-spacing: 0.2px;
       margin: 0 -18px;
-      /* remove margens internas laterais do card */
       border-radius: 8px 8px 0 0;
+      white-space: nowrap;
+      /* força ficar em uma linha só */
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .title {
@@ -140,6 +132,8 @@
 
       .alert-strip {
         margin: 0 -16px;
+        font-size: 12px;
+        padding: 5px 6px;
       }
     }
 
@@ -195,9 +189,11 @@
       transform: scale(.98);
     }
 
+    /* ⚫ Texto da descrição agora preto */
     .note {
       font-size: 14px;
-      color: #0a5;
+      color: #000;
+      /* preto */
       line-height: 1.5;
       margin: 16px 0 0;
       text-align: left;
@@ -288,6 +284,7 @@
       }
     }
   </style>
+
 </head>
 
 <body>
@@ -340,7 +337,7 @@
         Die Vervielfältigung, Verbreitung oder Änderung von Inhalten dieser Website – ganz oder teilweise – ist untersagt. Sämtliche Inhalte sind durch Urheberrechts- und geistige Eigentumsgesetze geschützt.
         Die bereitgestellten Informationen dienen ausschließlich Bildungs- und Informationszwecken. Es wird keine Garantie für gleiche Ergebnisse gegeben.
       </div>
-      <div class="copy">Copyright © 2025 Nutrisolution.de. Alle Rechte vorbehalten.</div>
+      <div class="copy">Copyright © 2025. Alle Rechte vorbehalten.</div>
     </footer>
   </main>
 </body>
