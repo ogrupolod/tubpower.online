@@ -6,12 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Advertorial – Gesundheit</title>
 
-
   <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
   <script type="text/javascript">
     digistorePromocode({ product_id: 633575, adjust_domain: true });
   </script>
-
 
   <style>
     :root {
@@ -40,20 +38,10 @@
     .wrap {
       max-width: 1024px;
       margin: 0 auto;
-      padding: 48px 20px 20px;
+      padding: 28px 20px 20px;
+      /* reduzido de 48px para 28px */
       text-align: center;
       position: relative;
-    }
-
-    /* Badge "Advertorial" fixo no topo, centralizado */
-    .label {
-      position: absolute;
-      top: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 12px;
-      color: var(--muted);
-      letter-spacing: .2px
     }
 
     .card {
@@ -101,9 +89,14 @@
       margin-left: -7.5%;
       /* centraliza a expansão */
       border-radius: 0;
+      filter: blur(10px);
+      transition: filter .35s ease;
     }
 
-    /* Mobile: imagem maior e empurrando o footer pra baixo */
+    .thumb img.loaded {
+      filter: blur(0);
+    }
+
     @media (max-width: 700px) {
       .thumb {
         margin: 28px -16px 36px;
@@ -116,11 +109,10 @@
 
       footer {
         margin-top: 60px;
-        /* dá respiro abaixo do botão */
       }
+
+      /* dá respiro abaixo do botão */
     }
-
-
 
     .play {
       position: absolute;
@@ -151,7 +143,6 @@
       margin-left: 6px
     }
 
-    /* Botão centralizado no meio da tela */
     .lead-button {
       display: block;
       margin: 24px auto 0;
@@ -183,7 +174,6 @@
       text-align: left;
     }
 
-    /* Footer com cinza clean e texto levemente escuro */
     footer {
       margin: 48px 0 0;
       background: var(--footer-bg);
@@ -221,7 +211,6 @@
       color: var(--footer-text)
     }
 
-    /* Responsive */
     @media (max-width:700px) {
       .title {
         font-size: 24px
@@ -238,9 +227,10 @@
 
     @media (max-width:480px) {
       .wrap {
-        padding: 54px 14px 18px
+        padding: 38px 14px 18px;
       }
 
+      /* também reduzido no mobile */
       .card {
         padding: 16px
       }
@@ -273,7 +263,6 @@
 
 <body>
   <main class="wrap" role="main">
-    <div class="label">Advertorial</div>
     <article class="card">
       <h1 class="title">Dr. Julia enthüllt: Ihr Darm könnte der wahre Grund für Ihre Gewichtszunahme sein (testen Sie dieses Ritual heute Abend)</h1>
       <p class="subtitle">Ein 20-Sekunden-Ritual mit koreanischem Ingwer und 3 natürlichen Zutaten, das die Sättigungshormone aktiviert, Blähungen reduziert und die Fettverbrennung im Schlaf ankurbelt – ganz ohne Diät oder Sport.</p>
@@ -282,9 +271,13 @@
 
       <a href="#" class="thumb-link" aria-label="Video öffnen">
         <figure class="thumb" aria-label="Videovorschau">
-          <img src="https://i.imgur.com/zC2uFvs.png" alt="Leber-Illustration mit Lupe" loading="lazy" decoding="async" />
+          <picture>
+            <source srcset="https://i.imgur.com/zC2uFvs.webp" type="image/webp">
+            <img src="https://i.imgur.com/zC2uFvs.png" alt="Leber-Illustration mit Lupe" width="700" height="400" loading="lazy" decoding="async" onload="this.classList.add('loaded')" />
+          </picture>
         </figure>
       </a>
+
 
       <a class="lead-button" href="#">👉 Dann sehen Sie sich jetzt dieses kurze Video an.</a>
 
