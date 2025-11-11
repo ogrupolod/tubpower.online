@@ -39,7 +39,6 @@
       max-width: 1024px;
       margin: 0 auto;
       padding: 28px 20px 20px;
-      /* reduzido de 48px para 28px */
       text-align: center;
       position: relative;
     }
@@ -49,19 +48,38 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
-      padding: 22px 18px;
       text-align: left;
       display: inline-block;
       max-width: 700px;
       width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 22px;
+    }
+
+    /* 🔴 Faixa vermelha ocupando toda a largura interna */
+    .alert-strip {
+      background: #c62828;
+      color: #ffeb3b;
+      /* amarelo forte */
+      text-align: center;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 12px 16px;
+      line-height: 1.4;
+      letter-spacing: 0.2px;
+      margin: 0 -18px;
+      /* remove margens internas laterais do card */
+      border-radius: 8px 8px 0 0;
     }
 
     .title {
       font-size: 28px;
       line-height: 1.25;
-      margin: 0 0 10px;
+      margin: 18px 0 10px;
       text-align: left;
       font-weight: 800;
+      padding: 0 18px;
     }
 
     .subtitle {
@@ -69,6 +87,7 @@
       color: var(--muted);
       margin: 0 0 16px;
       text-align: left;
+      padding: 0 18px;
     }
 
     .thumb {
@@ -77,17 +96,14 @@
       overflow: hidden;
       border: none;
       margin: 28px -18px 32px;
-      /* empurra a imagem até quase tocar as bordas do card */
     }
 
     .thumb img {
       display: block;
       width: 115%;
-      /* aumenta levemente o tamanho */
       max-width: none;
       height: auto;
       margin-left: -7.5%;
-      /* centraliza a expansão */
       border-radius: 0;
       filter: blur(10px);
       transition: filter .35s ease;
@@ -109,7 +125,10 @@
 
       footer {
         margin-top: 60px;
-        /* dá respiro abaixo do botão */
+      }
+
+      .alert-strip {
+        margin: 0 -16px;
       }
     }
 
@@ -171,6 +190,7 @@
       line-height: 1.5;
       margin: 16px 0 0;
       text-align: left;
+      padding: 0 18px;
     }
 
     footer {
@@ -227,11 +247,10 @@
     @media (max-width:480px) {
       .wrap {
         padding: 16px 14px 18px;
-        /* reduzido mais da metade no mobile */
       }
 
       .card {
-        padding: 16px;
+        padding-bottom: 16px;
       }
 
       .title {
@@ -260,14 +279,13 @@
   </style>
 </head>
 
-
 <body>
   <main class="wrap" role="main">
     <article class="card">
+      <div class="alert-strip">Diese Seite wird in wenigen Minuten offline gehen!</div>
+
       <h1 class="title">Dr. Julia enthüllt: Ihr Darm könnte der wahre Grund für Ihre Gewichtszunahme sein (testen Sie dieses Ritual heute Abend)</h1>
       <p class="subtitle">Ein 20-Sekunden-Ritual mit koreanischem Ingwer und 3 natürlichen Zutaten, das die Sättigungshormone aktiviert, Blähungen reduziert und die Fettverbrennung im Schlaf ankurbelt – ganz ohne Diät oder Sport.</p>
-
-
 
       <a href="#" class="thumb-link" aria-label="Video öffnen">
         <figure class="thumb" aria-label="Videovorschau">
@@ -278,30 +296,19 @@
         </figure>
       </a>
 
-
       <a class="lead-button" href="#">👉 Dann sehen Sie sich jetzt dieses kurze Video an.</a>
 
-
-
-      <p class="note">Neue Studien zeigen, wie Sie hartnäckiges Bauchfett auf natürliche Weise loswerden können, indem Sie das Darmgleichgewicht wiederherstellen und Ihren Stoffwechsel rund um die Uhr aktivieren.
-
-        Wenn Sie – oder jemand, den Sie kennen – Schwierigkeiten haben abzunehmen, fühlen Sie sich oft aufgebläht oder energielos?</p>
-
+      <p class="note">Neue Studien zeigen, wie Sie hartnäckiges Bauchfett auf natürliche Weise loswerden können, indem Sie das Darmgleichgewicht wiederherstellen und Ihren Stoffwechsel rund um die Uhr aktivieren. Wenn Sie – oder jemand, den Sie kennen – Schwierigkeiten haben abzunehmen, fühlen Sie sich oft aufgebläht oder energielos?</p>
 
       <a class="lead-button" href="#">👉 Dann sehen Sie sich jetzt dieses kurze Video an.</a>
-
-
     </article>
-
-
 
     <script>
       const URL_A = "../gf1";
-      const URL_B = "../gf2"; // 2ª opção
+      const URL_B = "../gf2";
 
       function withQS(u) { return u + (location.search || ""); }
 
-      // aplica split 50/50 em cada elemento individualmente
       document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.thumb-link, .lead-button').forEach(el => {
           const chosen = (Math.random() < 0.5) ? URL_A : URL_B;
@@ -311,10 +318,6 @@
         });
       });
     </script>
-
-
-
-
 
     <footer>
       <div class="top-links">
